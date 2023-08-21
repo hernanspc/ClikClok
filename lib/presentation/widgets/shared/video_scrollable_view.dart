@@ -1,5 +1,6 @@
 import 'package:clickclock/domain/entities/video_post.dart';
 import 'package:clickclock/presentation/widgets/shared/video_buttons.dart';
+import 'package:clickclock/presentation/widgets/video/fullscreen_player.dart';
 import 'package:flutter/material.dart';
 
 class ScrollableView extends StatelessWidget {
@@ -21,7 +22,11 @@ class ScrollableView extends StatelessWidget {
         return Stack(
           children: [
             //VIdeo player
-
+            SizedBox.expand(
+                child: FullScreenPlayer(
+              caption: videoPost.caption,
+              videoUrl: videoPost.videoUrl,
+            )),
             //gradiente
 
             //Botones
