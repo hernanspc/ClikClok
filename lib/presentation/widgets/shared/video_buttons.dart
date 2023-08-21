@@ -1,3 +1,4 @@
+import 'package:clickclock/config/helpers/human_formats.dart';
 import 'package:clickclock/domain/entities/video_post.dart';
 import 'package:flutter/material.dart';
 
@@ -44,9 +45,13 @@ class _CustomIconButton extends StatelessWidget {
       children: [
         IconButton(
           onPressed: () {},
-          icon: Icon(iconData, color: color),
+          icon: Icon(
+            iconData,
+            color: color,
+            size: 30,
+          ),
         ),
-        Text('$value'),
+        Text(HumanFormats.humanReadbleNumber(value.toDouble())),
       ],
     );
   }
