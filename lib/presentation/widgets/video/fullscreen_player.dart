@@ -58,7 +58,9 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
                 children: [
                   VideoPlayer(controller),
                   //Gradiente
-                  VideoBackground(),
+                  VideoBackground(
+                    stops: const [0.8, 1.0],
+                  ),
                   //Texto
                   Positioned(
                     bottom: 50,
